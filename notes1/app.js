@@ -7,19 +7,18 @@ const yargs = require("yargs"); // npm install yargs@4.7.1 --save
 const notes = require("./note.js");
 
 const argv = yargs.argv;
-var command = process.argv[2];
+var command = argv._[0];
 console.log(`Command: ${command}`);
-console.log("Process ", process.argv)
 console.log("Yargs ", argv)
 
 if (command === 'add') {
-    console.log("Adding new note.");
+    notes.addNote(argv.title, argv.body);
 } else if (command === "list") {
-    console.log("Listing all notes.");
+    notes.getAll();
 } else if (command === "read") {
-    console.log("Read a note.");
+    notes.getNote(argv.title);
 } else if (command === "remove") {
-    console.log("Remove a note.");
+    notes.removeNote(argv.title);
 } else {
     console.log("Command not recognized.");
 }
