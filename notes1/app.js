@@ -4,7 +4,30 @@ const yargs = require("yargs"); // npm install yargs@4.7.1 --save
 
 const notes = require("./note.js");
 
-const argv = yargs.argv;
+const titleCommand = {
+    describe: "Title of note.",
+    demand: true,
+    alias: 't'
+};
+
+const argv = yargs // advance yargs usage.
+    .command('add', 'Add a new note', {
+        title: titleCommand,
+        body: {
+            describ: "Body of the note.",
+            demand: true,
+            alias: 'b'
+        }
+    })
+    .command('list', 'List all notes.')
+    .command('read', 'Read a note.', {
+        title: titleCommand
+    })
+    .command('remove', 'Remove a note.', {
+        title: titleCommand
+    })
+    .help()
+    .argv;
 var command = argv._[0];
 
 if (command === 'add') {
