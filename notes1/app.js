@@ -12,7 +12,10 @@ console.log(`Command: ${command}`);
 console.log("Yargs ", argv)
 
 if (command === 'add') {
-    notes.addNote(argv.title, argv.body);
+    var note = notes.addNote(argv.title, argv.body);
+    if (note === undefined) {
+        console.log("No note saved, possible duplicate.");
+    } else { console.log(`Title: ${note.title},  Body: ${note.body}`) }
 } else if (command === "list") {
     notes.getAll();
 } else if (command === "read") {
