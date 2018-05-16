@@ -16,11 +16,20 @@ const argv = yargs
     .alias('help', 'h')
     .argv;
 
+var locURL = `${mapURL}${encodeURIComponent(argv.a)}&key=${apiKey}`;
+
 request({
-    url: `${mapURL}${encodeURIComponent(argv.a)}&key=${apiKey}`,
+    url: locURL,
     json: true
 }, (error, response, body) => {
-    console.log(`Address: ${body.results[0].formatted_address}`);
-    console.log(`Latitude: ${body.results[0].geometry.location.lat}`);
-    console.log(`longitude: ${body.results[0].geometry.location.lng}`);
+    console.log(body);
+    if (error) {
+        console.log("Unable to connect.");
+    } else if (body.status === 'ZERO_RESULTS') {
+        console.log("Unsble to find that address.");
+    } else if (body.status === 'OK') {
+        console.log(`Address: ${body.results[0].formatted_address}`);
+        console.log(`Latitude: ${body.results[0].geometry.location.lat}`);
+        console.log(`longitude: ${body.results[0].geometry.location.lng}`);
+    }
 });
