@@ -1,11 +1,14 @@
 const request = require("request");
 
-const apiKey = 'AIzaSyA6gAI24ZjS1ODBUaxW1PZDVORkWcG9dbU';
+const mapApiKey = 'AIzaSyA6gAI24ZjS1ODBUaxW1PZDVORkWcG9dbU';
+const weatherApiKey = '21f238b06606388865ecea8de8b50472';
+
 const mapURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
+const weatherURL = `https://api.darksky.net/forecast/${weatherApiKey}/${lat},${long}`
 
 
 var geocodeAddress = (addr, callback) => {
-    var locURL = `${mapURL}${encodeURIComponent(addr)}&key=${apiKey}`;
+    var locURL = `${mapURL}${encodeURIComponent(addr)}&key=${mapApiKey}`;
     request({
         url: locURL,
         json: true
