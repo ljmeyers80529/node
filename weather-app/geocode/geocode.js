@@ -1,10 +1,8 @@
 const request = require("request");
 
 const mapApiKey = 'AIzaSyA6gAI24ZjS1ODBUaxW1PZDVORkWcG9dbU';
-const weatherApiKey = '21f238b06606388865ecea8de8b50472';
 
 const mapURL = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
-const weatherURL = `https://api.darksky.net/forecast/${weatherApiKey}/${lat},${long}`
 
 
 var geocodeAddress = (addr, callback) => {
@@ -21,7 +19,7 @@ var geocodeAddress = (addr, callback) => {
             callback(undefined, {
                 address: body.results[0].formatted_address,
                 latitude: body.results[0].geometry.location.lat,
-                lonitude: body.results[0].geometry.location.lng
+                longitude: body.results[0].geometry.location.lng
             });
         }
     });
