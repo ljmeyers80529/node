@@ -6,3 +6,4 @@ npm install yargs --save            Option string parser                        
 npm install request --save          Simplified HTTP client                                            https://www.npmjs.com/package/request
 npm install axios --save            Promise based HTTP client                                         https://www.npmjs.com/package/axios
 npm install express --save          Node minimalist web framework                                     https://expressjs.com/
+npm install hbs --save              handlebars view engine.                                       https://www.npmjs.com/package/handlebars
