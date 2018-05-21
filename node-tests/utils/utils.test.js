@@ -19,3 +19,11 @@ it('Should square a number', () => {
 
 // requires modifiection of package.json file as shown.
 // execute by using npm test.
+
+// to auto run tests with node monitor enter: nodemon --exec 'npm test'
+// also can add a new script field such as:
+// "scripts": {
+//     "test": "mocha **/*.test.js",
+//     "test-watch": "nodemon --exec \"npm test\""
+// },
+// then execute npm run test-watch
