@@ -10,3 +10,4 @@ npm install hbs --save              handlebars view engine.                     
 npm install mocha --save-dev            test suite                                                https://mochajs.org/
 npm install expect@1.20.2 --save-dev    assertions                                                https://github.com/mjackson/expect
 npm install supertest --save-dev        library to to test node js HTTP servers.                  https://github.com/visionmedia/supertest
+npm install rewire --save-dev           Monkey patching for node js unit tests.                   https://www.npmjs.com/package/rewire
