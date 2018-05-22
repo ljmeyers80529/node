@@ -7,3 +7,4 @@ weather-app/node_modules
 node-web-server/node_modules
 node-web-server/server.log
 node-tests/node_modules
+node-todo-api/node_modules
