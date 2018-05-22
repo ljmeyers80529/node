@@ -49,6 +49,21 @@ it('Cheking names...', () => {
     });
 });
 
+
+it('Should Async Add 2 numbers...', (done) => { // add 'done' as argument
+    utils.asyncAdd(4, 3, (sum) => {
+        expect(sum).toBe(7).toBeA('number');
+        done(); // call 'done' so it processes correctly.
+    });
+});
+
+
+it('Should square a number...', (done) => { // add 'done' as argument
+    utils.asyncSquare(3, (sqr) => {
+        expect(sqr).toBe(9).toBeA('number');
+        done(); // call 'done' so it processes correctly.
+    });
+});
 // requires modifiection of package.json file as shown.
 // execute by using npm test.
 
