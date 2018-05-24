@@ -12,3 +12,4 @@ npm install expect@1.20.2 --save-dev    assertions                              
 npm install supertest --save-dev        library to to test node js HTTP servers.                  https://github.com/visionmedia/supertest
 npm install rewire --save-dev           Monkey patching for node js unit tests.                   https://www.npmjs.com/package/rewire
 npm install mongodb --save              Mongo DB connection                                       https://github.com/mongodb/node-mongodb-native
+npm install mongoose --save             Mongo object modeling                                     https://http://mongoosejs.com/
