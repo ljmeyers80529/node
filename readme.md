@@ -13,3 +13,9 @@ npm install supertest --save-dev        library to to test node js HTTP servers.
 npm install rewire --save-dev           Monkey patching for node js unit tests.                   https://www.npmjs.com/package/rewire
 npm install mongodb --save              Mongo DB connection                                       https://github.com/mongodb/node-mongodb-native
 npm install mongoose --save             Mongo object modeling                                     https://http://mongoosejs.com/
+
+Downloads required:
+
+postman                                 https://www.getpostman.com/
+
+
