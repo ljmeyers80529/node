@@ -14,6 +14,7 @@ npm install rewire --save-dev           Monkey patching for node js unit tests. 
 npm install mongodb --save              Mongo DB connection                                       https://github.com/mongodb/node-mongodb-native
 npm install mongoose --save             Mongo object modeling                                     https://http://mongoosejs.com/
 npm install body-parser --save          Parses JSON.
+npm install validator --save            validators                                                https://www.npmjs.com/package/validator
 
 Downloads required:
 
