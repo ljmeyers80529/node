@@ -15,6 +15,8 @@ npm install mongodb --save              Mongo DB connection                     
 npm install mongoose --save             Mongo object modeling                                     https://http://mongoosejs.com/
 npm install body-parser --save          Parses JSON.
 npm install validator --save            validators                                                https://www.npmjs.com/package/validator
+npm install crypto-js --save            cryptography and hashing                                  
+npm install jsonwebtoken --save         JSON web token.
 
 Downloads required:
 
