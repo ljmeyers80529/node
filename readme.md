@@ -13,11 +13,11 @@ npm install supertest --save-dev        library to to test node js HTTP servers.
 npm install rewire --save-dev           Monkey patching for node js unit tests.                   https://www.npmjs.com/package/rewire
 npm install mongodb --save              Mongo DB connection                                       https://github.com/mongodb/node-mongodb-native
 npm install mongoose --save             Mongo object modeling                                     https://http://mongoosejs.com/
-npm install body-parser --save          Parses JSON.
+npm install body-parser --save          Parses JSON.                                              https://www.npmjs.com/package/body-parser
 npm install validator --save            validators                                                https://www.npmjs.com/package/validator
-npm install crypto-js --save            cryptography and hashing                                  
-npm install jsonwebtoken --save         JSON web token.
-npm install bcryptjs --save
+npm install crypto-js --save            cryptography and hashing                                  https://www.npmjs.com/package/crypto-js
+npm install jsonwebtoken --save         JSON web token.                                           https://www.npmjs.com/package/jsonwebtoken
+npm install bcryptjs --save             b-crypt hasing library                                    https://www.npmjs.com/package/bcryptjs
 
 Downloads required:
 
