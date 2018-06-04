@@ -17,6 +17,7 @@ npm install body-parser --save          Parses JSON.
 npm install validator --save            validators                                                https://www.npmjs.com/package/validator
 npm install crypto-js --save            cryptography and hashing                                  
 npm install jsonwebtoken --save         JSON web token.
+npm install bcryptjs --save
 
 Downloads required:
 
