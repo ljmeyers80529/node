@@ -7,7 +7,7 @@ npm install request --save          Simplified HTTP client                      
 npm install axios --save            Promise based HTTP client                                     https://www.npmjs.com/package/axios
 npm install express --save          Node minimalist web framework                                 https://expressjs.com/
 npm install hbs --save              handlebars view engine.                                       https://www.npmjs.com/package/handlebars
-npm install mocha --save-dev            test suite                                                https://mochajs.org/
+npm install mocha --save-dev            test suite                                                https://facebook.github.io/jest/docs/en/expect.html
 npm install expect --save-dev           assertions                                                https://github.com/mjackson/expect
 npm install supertest --save-dev        library to to test node js HTTP servers.                  https://github.com/visionmedia/supertest
 npm install rewire --save-dev           Monkey patching for node js unit tests.                   https://www.npmjs.com/package/rewire
