@@ -2,6 +2,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketIO = require('socket.io');
+const { generateMessage } = require('./utils/message');
 
 const publicPath = path.join(__dirname, '..//public')
 const port = process.env.PORT || 3000;
@@ -15,18 +16,9 @@ app.use(express.static(publicPath));
 io.on('connection', (socket) => {
     console.log('New user connected.');
 
-    socket.emit('newMessage', {
-        from: 'Admin',
-        text: 'Welcome to the chat app.',
-        createdAt: new Date().getTime()
-    });
+    socket.emit('newMessage', generateMessage('Admin', 'Welcome to the chat app.'));
 
-
-    socket.broadcast.emit('newMessage', {
-        from: 'Admin',
-        text: 'New user has joined.',
-        createdAt: new Date().getTime()
-    });
+    socket.broadcast.emit('newMessage', generateMessage('Admin', 'New user has joined.'));
 
     // socket.emit('newMessage', { // emit signal to the client
     //     from: 'x',
@@ -36,16 +28,7 @@ io.on('connection', (socket) => {
 
     socket.on('createMessage', (data) => { // listen for data from the client
         console.log('Created message:', data);
-        io.emit('newMessage', { // broadcast to everyone, including the one that sent the message.
-            from: data.from,
-            text: data.text,
-            createdAt: new Date().getTime()
-        });
-        // socket.broadcast.emit('newMessage', {  // broadcast to everyone, excluding the one that sent the message.
-        //     from: data.from,
-        //     text: data.text,
-        //     createdAt: new Date().getTime()
-        // });
+        io.emit('newMessage', generateMessage(data.from, data.text));
     });
 
     socket.on('disconnect', () => {
