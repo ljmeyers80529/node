@@ -16,3 +16,10 @@ socket.on('disconnect', function() {
 socket.on('newMessage', function(msg) { // listen for data from server
     console.log('New Message', msg);
 });
+
+socket.emit('createMessage', {
+    from: 'Me80529',
+    text: 'Testing ACK'
+}, function(data) {
+    console.log('ACK!', data);
+});
