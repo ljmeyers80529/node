@@ -15,11 +15,24 @@ socket.on('disconnect', function() {
 
 socket.on('newMessage', function(msg) { // listen for data from server
     console.log('New Message', msg);
+    var li = jQuery('<li></li>');
+    li.text(`${msg.from}: ${msg.text}`);
+    jQuery('#messages').append(li);
 });
 
-socket.emit('createMessage', {
-    from: 'Me80529',
-    text: 'Testing ACK'
-}, function(data) {
-    console.log('ACK!', data);
+// socket.emit('createMessage', {
+//     from: 'Me80529',
+//     text: 'Testing ACK'
+// }, function(data) {
+//     console.log('ACK!', data);
+// });
+
+jQuery('#message-form').on('submit', function(e) {
+    e.preventDefault();
+    socket.emit('createMessage', {
+        from: "User",
+        text: jQuery('[name=message]').val()
+    }, function() {
+
+    });
 });
