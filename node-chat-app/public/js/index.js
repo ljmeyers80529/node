@@ -20,6 +20,17 @@ socket.on('newMessage', function(msg) { // listen for data from server
     jQuery('#messages').append(li);
 });
 
+socket.on('newLocationMessage', function(msg) {
+    var li = jQuery('<li></li>');
+    var a = jQuery('<a target="_blank">My current location</a>');
+
+    li.text(`${msg.from}: `);
+    a.attr('href', msg.url);
+
+    li.append(a);
+    jQuery('#messages').append(li);
+});
+
 // socket.emit('createMessage', {
 //     from: 'Me80529',
 //     text: 'Testing ACK'
