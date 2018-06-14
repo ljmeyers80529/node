@@ -30,3 +30,8 @@ mustache                                templating javascript file.             
                                         Create new file, copy file contents into the local
                                         file and save. In the html file, include a script tag.
 
+deparm                                  Parses list of parameters in a search string.              links.mead.io/deparam
+                                        Click Raw, use cntrl-A, cntrl-C to highlight
+                                        and copy the contents to a new file.
+                                        
+
