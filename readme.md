@@ -19,6 +19,7 @@ npm install crypto-js --save            cryptography and hashing                
 npm install jsonwebtoken --save         JSON web token.                                           https://www.npmjs.com/package/jsonwebtoken
 npm install bcryptjs --save             b-crypt hasing library                                    https://www.npmjs.com/package/bcryptjs
 npm install socket.io --save            socket.io library                                         https://socket.io/
+npm install moment --save               time formatting library                                   https://momentjs.com/
 
 Downloads required:
 
