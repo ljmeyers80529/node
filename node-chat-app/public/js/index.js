@@ -1,12 +1,23 @@
 var socket = io();
 
+function scrollToBottom() {
+    // selectors
+    var messages = jQuery('#messages');
+    var newMessage = messages.children('li:last-child');
+    // heights
+    var clientHeight = messages.prop('clientHeight'); // properties.
+    var scrollTop = messages.prop('scrollTop');
+    var scrollHeight = messages.prop('scrollHeight');
+    var newMessageHeight = newMessage.innerHeight();
+    var lastMesssageHeight = newMessage.prev().innerHeight();
+
+    if (clientHeight + scrollTop + newMessageHeight + lastMesssageHeight >= scrollHeight) {
+        messages.scrollTop(scrollHeight);
+    }
+}
+
 socket.on('connect', function() {
     console.log('Connected to server.')
-
-    // socket.emit('createMessage', { // emit signal to the server
-    //     from: 'xxxx',
-    //     text: 'xxxxx'
-    // });
 });
 
 socket.on('disconnect', function() {
@@ -22,6 +33,7 @@ socket.on('newMessage', function(msg) { // listen for data from server
         createdAt: fmtTime
     });
     jQuery('#messages').append(html);
+    scrollToBottom();
 });
 
 socket.on('newLocationMessage', function(msg) {
@@ -33,23 +45,8 @@ socket.on('newLocationMessage', function(msg) {
         createdAt: fmtTime
     });
     jQuery('#messages').append(html);
-
-    // var li = jQuery('<li></li>');
-    // var a = jQuery('<a target="_blank">My current location</a>');
-
-    // li.text(`${msg.from} ${fmtTime}: `);
-    // a.attr('href', msg.url);
-
-    // li.append(a);
-    // jQuery('#messages').append(li);
+    scrollToBottom();
 });
-
-// socket.emit('createMessage', {
-//     from: 'Me80529',
-//     text: 'Testing ACK'
-// }, function(data) {
-//     console.log('ACK!', data);
-// });
 
 jQuery('#message-form').on('submit', function(e) {
     e.preventDefault();
