@@ -23,6 +23,10 @@ npm install moment --save               time formatting library                 
 
 Downloads required:
 
-postman                                 https://www.getpostman.com/
-
+postman                                                                                           https://www.getpostman.com/
+mustache                                templating javascript file.                               https://github.com/janl/mustache.js/
+                                        find mustache.js, click on file, click raw
+                                        Use cntrl-A to highlight then cntrl-c to copy.
+                                        Create new file, copy file contents into the local
+                                        file and save. In the html file, include a script tag.
 
