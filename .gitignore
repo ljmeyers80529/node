@@ -9,4 +9,6 @@ node-web-server/server.log
 node-tests/node_modules
 node-todo-api/node_modules
 node-todo-api/server/config/config.json
-node-CHAT-app/node_modules
+node-chat-app/node_modules
+node-todo-api-async/node_modules
+node-todo-api-async/server/config/config.json
