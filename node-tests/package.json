@@ -13,9 +13,9 @@
         "expect": "^1.20.2",
         "mocha": "^5.2.0",
         "rewire": "^4.0.1",
-        "supertest": "^3.1.0"
+        "supertest": "^3.4.2"
     },
     "dependencies": {
-        "express": "^4.16.3"
+        "express": "^4.16.4"
     }
 }
